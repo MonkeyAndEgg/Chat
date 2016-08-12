@@ -15,6 +15,8 @@ public class ChatServer {
 			ss = new ServerSocket(8889);
 		}catch(BindException e){
 			System.out.println("The port is currently occupied.");
+			System.out.println("Please close the relating programs and then restart the server.");
+			System.exit(0);
 		}catch(IOException e){
 			e.printStackTrace();
 		}
